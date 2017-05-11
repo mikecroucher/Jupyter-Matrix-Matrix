@@ -1,6 +1,6 @@
- Measuring the floating point performance of your machine
+# Measuring the floating point performance of your machine
 
-Matrix-Matrix multiplication is often used to benchmark machines because the mathematics is such that it is one of the few operations where one can obtain close to theoretical peak performance in pratice.
+[Matrix-Matrix multiplication](https://en.wikipedia.org/wiki/Matrix_multiplication) is often used to benchmark machines because the mathematics is such that it is one of the few operations where one can obtain close to theoretical peak performance in pratice.
 
 The number of floating point operations(Flops) in a Matrix-Matrix multiplication of two $N$ x $N$ matrices is given by $2N^3-N^2$ (See http://www2.hawaii.edu/~norbert/CompPhys/compphysicsch10.html for details of how this was determined).
 
