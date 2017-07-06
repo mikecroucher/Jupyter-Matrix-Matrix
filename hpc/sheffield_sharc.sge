@@ -1,0 +1,30 @@
+#!/bin/bash
+#Submission script for University of Sheffield's Sharc HPC cluster
+#Request 16 cores
+#$ -pe smp 16
+#Use the RSE project
+#$ -P rse
+
+module load apps/python/conda
+
+#Create conda environment if it doesn't already exist
+environment_name=testing123
+if conda env list | grep -q $environment_name; then
+  #The environment already exists
+  :
+else
+  #The environment doesn't exist so we create it
+  conda create -n $environment_name -y python=3.6 mkl numpy jupyter matplotlib
+fi
+
+#activate the Python environment
+source activate $environment_name
+
+source_notebook=./../MatrixMatrixBenchmark.ipynb
+result_notebook=$PWD/result_$JOB_ID.ipynb
+
+#Set the number of threads to use
+OMP_NUM_THREADS=16
+
+jupyter nbconvert --ExecutePreprocessor.timeout=360000 --to notebook --execute $source_notebook --output $result_notebook
+
