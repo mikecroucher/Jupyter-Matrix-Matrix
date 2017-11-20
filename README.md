@@ -7,3 +7,14 @@ The number of floating point operations(Flops) in a Matrix-Matrix multiplication
 For this benchmark, we construct two random $N$ x $N$ matrices and time how long it takes to multiply them together, $t$. We then compute the number of Gigaflops/s exhibited by that operation via $\frac{2N^3-N^2}{t*10^9}$. We do this several times for any given $N$ and record the average and the best (peak) results obtained.  $N$ is then varied from 250 to 10,000 in steps of 250 to see how performance varies with matrix size.  Usually, the highest performance is obtained by multiplying large matrices together.
 
 For highest performance, you should use a version of numpy that has been linked against a high performance BLAS library such as [OpenBLAS](http://www.openblas.net/) or the Intel MKL(https://software.intel.com/en-us/intel-mkl). The [Anaconda Python](https://www.continuum.io/downloads) distribution includes the Intel MKL by default on Windows and Linux (Mac includes its own high performance BLAS library).
+
+# Some results
+
+The full notebooks are available in the **results** folder.  Here are the headline numbers when using Anaconda Python linked against the MKL (i.e the default install at the time of writing).
+
+* Dell XPS9560, May 2017, Max size 10000x10000, 141 Gflops
+* Mid 2015 Macbook Pro, May 2017, Max Size 10000x10000, 169 Gflops
+* Azure Notebook, May 2017, Max size 1000x1000, 263 Gflops
+* Amazon c4x4xlarge, September 2017, Max size 10000x10000, 333 Gflops
+* Amazon c5x18xlarge, November 2017, Max size 10000x10000, 1366 Gflops
+
