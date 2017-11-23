@@ -13,7 +13,7 @@ For highest performance, you should use a version of numpy that has been linked 
 The full notebooks are available in the **results** folder.  Here are the headline numbers when using Anaconda Python linked against the MKL (i.e the default install at the time of writing).
 
 * Dell XPS9560, May 2017, Max size 10000x10000, 141 Gflops
-* Mid 2015 Macbook Pro, May 2017, Max Size 10000x10000, 169 Gflops
+* Mid 2014 Macbook Pro, May 2017, Max Size 10000x10000, 169 Gflops
 * Azure Notebook, May 2017, Max size 1000x1000, 263 Gflops
 * Amazon c4x4xlarge, September 2017, Max size 10000x10000, 333 Gflops
 * Amazon c5x18xlarge, November 2017, Max size 10000x10000, 1366 Gflops
