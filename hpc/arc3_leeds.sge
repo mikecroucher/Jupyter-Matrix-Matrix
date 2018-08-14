@@ -1,0 +1,36 @@
+#!/bin/bash
+#Submission script for University of Sheffield's Sharc HPC cluster
+#Request 14 cores
+#$ -pe smp 24
+#$ -l h_vmem=3G
+#$ -l h_rt=8:00:00
+
+#Install miniconda if it isn't there already
+if [ ! -d ./miniconda/]; then
+wget https://repo.continuum.io/miniconda/Miniconda3-3.7.0-Linux-x86_64.sh -O ~/miniconda.sh
+bash ./miniconda.sh -b -p $HOME/miniconda
+fi
+#Add miniconda to the path
+export PATH="$CWD/miniconda/bin:$PATH"
+
+#Create conda environment if it doesn't already exist
+environment_name=testing123
+if conda env list | grep -q $environment_name; then
+  #The environment already exists
+  :
+else
+  #The environment doesn't exist so we create it
+  conda create -n $environment_name -y python=3.6 mkl numpy jupyter matplotlib
+fi
+
+#activate the Python environment
+source activate $environment_name
+
+source_notebook=./../MatrixMatrixBenchmark.ipynb
+result_notebook=$PWD/result_$JOB_ID.ipynb
+
+#Set the number of threads to use
+OMP_NUM_THREADS=24
+
+jupyter nbconvert --ExecutePreprocessor.timeout=360000 --to notebook --execute $source_notebook --output $result_notebook
+
