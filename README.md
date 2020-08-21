@@ -29,9 +29,10 @@ If you look at individual results notebooks you'll notice that the notebooks hav
 
 Results from various traditional HPC Clusters.
 
-* [Sharc-16](https://github.com/mikecroucher/Jupyter-Matrix-Matrix/blob/master/results/hpc/Sheffield_sharc_16cores.ipynb) - 458 Gflops: 16 core Haswell Nodes that formed the basis of Sharc: Sheffield' successor to Iceberg.  [CPUs were released in Q3 2014](https://ark.intel.com/content/www/us/en/ark/products/83356/intel-xeon-processor-e5-2630-v3-20m-cache-2-40-ghz.html)
-* [Iceberg-16](https://github.com/mikecroucher/Jupyter-Matrix-Matrix/blob/master/results/hpc/Sheffield_iceberg_16cores.ipynb) - 333 Gflops: 16 core Ivy Bridge nodes that were added to Iceberg after a few years of operation.  [CPUs were released in Q3 2013](https://ark.intel.com/content/www/us/en/ark/products/75269/intel-xeon-processor-e5-2650-v2-20m-cache-2-60-ghz.html)
-* [Iceberg-12](results/hpc/Sheffield_iceberg_12cores.ipynb), 120 Gflops: 12 Core Intel Westmere nodes from University of Sheffield's 'Iceberg' Cluster.  They were old when I ran the benchmark: The [CPUs were released in 2010](https://ark.intel.com/content/www/us/en/ark/products/47922/intel-xeon-processor-x5650-12m-cache-2-66-ghz-6-40-gt-s-intel-qpi.html)
+* [Sharc-32](https://github.com/mikecroucher/Jupyter-Matrix-Matrix/blob/master/results/hpc/Sheffield_sharc_32cores.ipynb) - 802 Gflops: 32 core Broadwell Nodes (2 sockets) that were added to ShARC thanks to a grant I won. [CPUs were released in Q1 2016](https://ark.intel.com/content/www/us/en/ark/products/91766/intel-xeon-processor-e5-2683-v4-40m-cache-2-10-ghz.html)
+* [Sharc-16](https://github.com/mikecroucher/Jupyter-Matrix-Matrix/blob/master/results/hpc/Sheffield_sharc_16cores.ipynb) - 458 Gflops: 16 core Haswell Nodes (2 sockets) that formed the basis of Sharc: Sheffield' successor to Iceberg.  [CPUs were released in Q3 2014](https://ark.intel.com/content/www/us/en/ark/products/83356/intel-xeon-processor-e5-2630-v3-20m-cache-2-40-ghz.html)
+* [Iceberg-16](https://github.com/mikecroucher/Jupyter-Matrix-Matrix/blob/master/results/hpc/Sheffield_iceberg_16cores.ipynb) - 333 Gflops: 16 core Ivy Bridge nodes (2 sockets) that were added to Iceberg after a few years of operation.  [CPUs were released in Q3 2013](https://ark.intel.com/content/www/us/en/ark/products/75269/intel-xeon-processor-e5-2650-v2-20m-cache-2-60-ghz.html)
+* [Iceberg-12](results/hpc/Sheffield_iceberg_12cores.ipynb), 120 Gflops: 12 Core Intel Westmere nodes (2 sockets)  from University of Sheffield's 'Iceberg' Cluster.  They were old when I ran the benchmark: The [CPUs were released in 2010](https://ark.intel.com/content/www/us/en/ark/products/47922/intel-xeon-processor-x5650-12m-cache-2-66-ghz-6-40-gt-s-intel-qpi.html)
 
 
 
