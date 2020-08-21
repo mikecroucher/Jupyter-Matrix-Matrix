@@ -8,13 +8,24 @@ For this benchmark, we construct two random $N$ x $N$ matrices and time how long
 
 For highest performance, you should use a version of numpy that has been linked against a high performance BLAS library such as [OpenBLAS](http://www.openblas.net/) or the Intel MKL(https://software.intel.com/en-us/intel-mkl). The [Anaconda Python](https://www.continuum.io/downloads) distribution includes the Intel MKL by default on Windows and Linux (Mac includes its own high performance BLAS library).
 
-# Some results
+# Results
 
-The full notebooks are available in the **results** folder.  Here are the headline numbers when using Anaconda Python linked against the MKL (i.e the default install at the time of writing).
+If you look at individual results notebooks you'll notice that the notebooks have evolved a little over time.  The core computation is always the same though.
 
-* Dell XPS9560, May 2017, Max size 10000x10000, 141 Gflops
-* Mid 2014 Macbook Pro, May 2017, Max Size 10000x10000, 169 Gflops
+## Cloud 
+
 * Azure Notebook, May 2017, Max size 1000x1000, 263 Gflops
 * Amazon c4x4xlarge, September 2017, Max size 10000x10000, 333 Gflops
 * Amazon c5x18xlarge, November 2017, Max size 10000x10000, 1366 Gflops
+
+## Laptops
+
+* Mid 2014 Macbook Pro, May 2017, Max Size 10000x10000, 169 Gflops
+* [Dell XPS9560](results/laptops/Dell_XPS9560.ipynb), May 2017, Max size 10000x10000, 141 Gflops
+
+## HPC Clusters
+
+Results from various traditional HPC Clusters.
+
+
 
